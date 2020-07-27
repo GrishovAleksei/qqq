@@ -12,12 +12,8 @@ export default {
   },
   methods: {
     userLogin(userInfo) {
-      try {
-        await this.$auth.loginWith('local', {data: userInfo})
-        this.$router.push('/')
-      } catch (err) {
-        console.log(err)
-      }
+      this.$store.commit('SET_CURRENT_USER', userInfo)
+      
     }
   }
 }

@@ -24,7 +24,7 @@
     <v-card-actions>
       <v-spacer></v-spacer>
       <v-btn color="success" 
-        @click="$auth.loginWith('local',{data: userInfo})"> {{ buttonText }}
+        @click="submitForm(userInfo)"> {{ buttonText }}
       </v-btn>
     </v-card-actions>
   </v-card>   
@@ -35,8 +35,8 @@ export default {
   data: () => ({
     showPassword: false,
     userInfo: {
-      username: '',
-      password: '',
+      username: 'qwerty',
+      password: '123',
     },
   }),
   props: ["submitForm", "buttonText"]  

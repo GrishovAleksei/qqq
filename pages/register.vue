@@ -11,11 +11,7 @@ export default {
     AuthForm,
   },
   methods :{
-    async userRegister(userInfo){
-      await this.$axios.post('/users', userInfo)
-      await this.$auth.loginWith('local', { data: userInfo })
-      this.$router.push('/')
-    }
+    
   }
 }
 </script>
